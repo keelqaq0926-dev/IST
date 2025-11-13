@@ -192,7 +192,7 @@ const GridImageUploader = () => {
                                 }`}
                             >
                                 <input
-                                    ref={(el) => (fileInputsRef.current[pos as GridPosition] = el)}
+                                    ref={(el) => { fileInputsRef.current[pos as GridPosition] = el; }}
                                     type="file"
                                     accept="image/*"
                                     onChange={(e) => handleFileChange(pos as GridPosition, e)}
